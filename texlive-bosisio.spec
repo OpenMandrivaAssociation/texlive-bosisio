@@ -1,3 +1,9 @@
+# revision 16989
+# category Package
+# catalog-ctan /macros/latex/contrib/bosisio
+# catalog-date 2010-02-10 21:47:34 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-bosisio
 Version:	20100210
 Release:	1
@@ -81,6 +87,7 @@ evenpage; graphfig; mathcmd; quotes; and sobolev.
 %doc %{_texmfdistdir}/source/latex/bosisio/quotes.dtx
 %doc %{_texmfdistdir}/source/latex/bosisio/sobolev.drv
 %doc %{_texmfdistdir}/source/latex/bosisio/sobolev.dtx
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -91,3 +98,5 @@ evenpage; graphfig; mathcmd; quotes; and sobolev.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
