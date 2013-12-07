@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-bosisio
 Version:	20100210
-Release:	5
+Release:	6
 Summary:	A collection of packages by Francesco Bosisio
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bosisio
