@@ -5,9 +5,9 @@ Summary:	A collection of packages by Francesco Bosisio
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bosisio
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.r16989.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.doc.r16989.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.source.r16989.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
