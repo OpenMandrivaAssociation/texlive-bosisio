@@ -1,19 +1,13 @@
-# revision 16989
-# category Package
-# catalog-ctan /macros/latex/contrib/bosisio
-# catalog-date 2010-02-10 21:47:34 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-bosisio
-Version:	20190228
+Version:	16989
 Release:	1
 Summary:	A collection of packages by Francesco Bosisio
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/bosisio
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.r16989.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.doc.r16989.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/bosisio.source.r16989.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +18,12 @@ A collection of packages containing: accenti dblfont; envmath;
 evenpage; graphfig; mathcmd; quotes; and sobolev.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -80,25 +74,11 @@ evenpage; graphfig; mathcmd; quotes; and sobolev.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc source %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Tue Jan 03 2012 Paulo Andrade <pcpa@mandriva.com.br> 20100210-2
-+ Revision: 749844
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20100210-1
-+ Revision: 717975
-- texlive-bosisio
-- texlive-bosisio
-- texlive-bosisio
-- texlive-bosisio
-- texlive-bosisio
-
